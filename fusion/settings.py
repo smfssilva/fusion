@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*m0^6wr9s2yf1*pqcb!j+4mbpv1*jloo)ww84hr5t-@7+nukry'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+# https://fusion-smfssilva.herokuapp.com/
 
 # Application definition
 
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-"""
+# banco de dados desenvolvimento
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -90,11 +90,11 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
 
-DATABASES = {
-    'default': dj_database_url.config()
-}
+# banco de dados produção
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
 
 # DATABASES = {
 #     'default': {
@@ -148,7 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Email teste console
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email produção

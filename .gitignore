@@ -9,3 +9,5 @@ __pychache__
 .idea
 
 template/*
+
+htmlcov/*
